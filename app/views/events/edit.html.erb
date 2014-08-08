@@ -1,0 +1,41 @@
+<h1>EDIT A event</h1>
+
+<center>
+	<div class="signupform">
+		<%= form_for @event do |f| %>
+		<% if @event.errors.any? %>
+		<div class="error messages">
+			<h2>Form is Invalid</h2>
+			<ul>
+				<% for message in @event.errors.full_messages %>
+				<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+		<% end %>
+		<p>
+			<%= f.label :name %><br />
+			<%= f.text_field :name %>
+		</p>
+		<p>
+			<%= f.label :place %><br />
+			<%= f.text_field :place %>
+		</p>
+		<p>
+			<%= f.label :when %><br />
+			<%= f.text_field :when %>
+		</p>
+		<p>
+			<%= f.label :price %><br />
+			<%= f.text_field :price %>
+		</p>
+		<p>
+			<%= f.label :participants %><br />
+			<%= f.text_field :participants %>
+		</p>
+		<p class="button"><%= f.submit %></p>
+		<% end %>
+	</div>
+	<%= link_to "back to the list of events!", events_path %>
+
+</center>

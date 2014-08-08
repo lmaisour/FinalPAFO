@@ -1,0 +1,65 @@
+<h1>REGISTRATION</h1>
+
+<center>
+	<div class = "newusercontainer">
+		<div class="signupform">
+			<%= form_for @user do |f| %>
+			<% if @user.errors.any? %>
+			<div class="error messages">
+				<h2>Form is Invalid</h2>
+				<ul>
+					<% for message in @user.errors.full_messages %>
+					<li><%= message %></li>
+					<% end %>
+				</ul>
+			</div>
+			<% end %>
+			<p class="signupfield">
+				<%= f.label :first_name %><br />
+				<%= f.text_field :first_name %>
+			</p>
+			<p class="signupfield">
+				<%= f.label :last_name %><br />
+				<%= f.text_field :last_name %>
+			</p>
+			<p class="signupfield">
+				<%= f.label :email %><br />
+				<%= f.text_field :email %>
+			</p>
+			<p class="signupfield">
+				<%= f.label :password %><br />
+				<%= f.password_field :password %>
+			</p>
+			<p class="signupfield">
+				<%= f.label :password_confirmation %><br />
+				<%= f.password_field :password_confirmation %>
+			</p>
+
+
+			Mac<%= f.check_box :mac %>OR
+			<%= f.check_box :pc %>PC<br />
+			iPhone<%= f.check_box :iphone %>OR
+			<%= f.check_box :android %>Android<br />
+			Democrat<%= f.check_box :democrat %>OR
+			<%= f.check_box :republican %>Republican<br />
+			Star Wars<%= f.check_box :starWars %>OR
+			<%= f.check_box :starTrek %>Star Trek<br />
+			Coke<%= f.check_box :coke %>OR
+			<%= f.check_box :pepsi %>Pepsi<br />
+			Team Edward<%= f.check_box :teamEdward %>OR
+			<%= f.check_box :teamJacob %>Team Jacob<br />
+			Harry Potter<%= f.check_box :harrypotter %>OR
+			<%= f.check_box :gameofthrones %>Game Of Thrones<br />
+
+
+			<%= form_for @user do |f| %> 
+			<%= f.file_field :image %> 
+			<%= f.submit "Create User" %> 
+			<% end %> 
+
+			Show <%= image_tag @user.image.url %>
+			<% end %>
+
+		</div>
+	</div>
+</center>

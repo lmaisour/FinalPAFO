@@ -1,0 +1,41 @@
+<h1>EDIT A USER</h1>
+
+<center>
+	<div class="signupform">
+		<%= form_for @user do |f| %>
+		<% if @user.errors.any? %>
+		<div class="error messages">
+			<h2>Form is Invalid</h2>
+			<ul>
+				<% for message in @user.errors.full_messages %>
+				<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+		<% end %>
+		<p>
+			<%= f.label :first_name %><br />
+			<%= f.text_field :first_name %>
+		</p>
+		<p>
+			<%= f.label :last_name %><br />
+			<%= f.text_field :last_name %>
+		</p>
+		<p>
+			<%= f.label :email %><br />
+			<%= f.text_field :email %>
+		</p>
+
+		<%= form_for @user do |f| %> 
+			<%= f.file_field :image %> 
+			<%= f.submit "Upload" %> 
+			<% end %> 
+
+			Show <%= image_tag @user.image.url %>
+			<% end %>
+
+		
+	</div>
+	<%= link_to "back to the list of users!", users_path %>
+
+</center>

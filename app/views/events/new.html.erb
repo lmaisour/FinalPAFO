@@ -1,0 +1,28 @@
+<h1>NEW EVENT</h1>
+
+<center>
+	<div class = "newusercontainer">
+<%= form_for @event do |f| %>
+
+	<p class="signupfield">
+		<%= f.label :name %><br />
+		<%= f.text_field :name %>
+	</p>
+	<p class="signupfield">
+		<%= f.label :place %><br />
+		<%= f.text_field :place %>
+	</p>
+	<p class="signupfield">
+		<%= f.label :when %><br />
+		<%= f.text_field :when %>
+	</p>
+	<p class="signupfield">
+		<%= f.label :price %><br />
+		<%= f.text_field :price %>
+	</p>
+	<p class="signupfield">
+		<%= f.label :participants %><br />
+		<%= f.text_field :participants %>
+	</p>
+	<p class="button"><%= f.submit %></p>
+<% end %>

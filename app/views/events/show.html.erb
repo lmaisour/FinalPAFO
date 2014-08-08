@@ -1,0 +1,11 @@
+<h1><%= @event.name %></h1>
+
+<div class="signupform">
+<p>This event's name is <%= @event.name %> <%= @event.name %>, and his/her email is <%= @event.place %> </p>
+
+<span>
+
+<%= link_to "Delete this event!", :event, method: :delete %>
+
+<%= link_to "Back to the list!", events_path %>
+</div>

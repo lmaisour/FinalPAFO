@@ -1,0 +1,13 @@
+<h1><%= @user.first_name %></h1>
+
+<%= image_tag @user.image %>
+
+<div class="signupform">
+<p>This user's name is <%= @user.first_name %> <%= @user.last_name %>, and his/her email is <%= @user.email %> </p>
+
+<span>
+
+<%= link_to "Delete this user!", :user, method: :delete, data: { confirm: "Are you sure you want to delete #{@user.first_name}?"} %>
+
+<%= link_to "Back to the list!", users_path %>
+</div>
