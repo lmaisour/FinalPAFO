@@ -1,23 +1,30 @@
-<div id="eventscontainer">
-	<div id="content">
-		<p>
-			Lorem ipsum dolor sit amet consect etuer adipi scing elit sed diam nonummy nibh euismod tinunt ut laoreet dolore magna aliquam erat volut. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. 
-		</p>
-		<p>
-			Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-		</p>
-		<p>
-			Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
-		</p>
+<div class="container1">
+	<center><h1>Upcoming Events</h1></center>
+	<div class="events">
+		<div class="row">
+			<div class="col-lg-18 col-lg-4 col-lg-3">
+				<div class="productbox">
+					<% @events.each do |s| %>
+					<div class="stitle">
+						<h3><%= s.name %></h3>
+						<div class="swhen">
+							<h3><%= s.when %></h3>
+
+						</div>
+					</div>
+					<div class="imgthumb img-responsive">
+						<img src="http://lorempixel.com/250/250/business/?ab=1df">
+					</div>
+					<div class="caption">
+						<h5><%= s.short_description %></h5>
+						<a href="#" class="btn btn-default btn-xs pull-right" role="button"><i class="glyphicon glyphicon-edit"></i></a> <a href="#" class="btn btn-success btn-lg" role="button">Join</a> <a href="#" class="btn btn-warning btn-lg" role="button">More Info</a>						
+					</div>
+				</div>
+				<% end %>
+			</div>
+
+		</div><!--/row-->
 	</div>
-	<div id="aside">
-		<h2> List Of Events </h2>
 
-<ul>
-	<% @events.each do |s| %>
+</div><!--/container -->
 
-	<li><%= s.name %></li> -- <%= link_to "Show more details!", event_path(s) %>
-
-<% end %>
-</ul>
-	</div>
