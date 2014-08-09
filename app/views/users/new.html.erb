@@ -1,65 +1,100 @@
-<h1>REGISTRATION</h1>
+<div class="signupcontainer">
 
-<center>
-	<div class = "newusercontainer">
-		<div class="signupform">
-			<%= form_for @user do |f| %>
-			<% if @user.errors.any? %>
-			<div class="error messages">
-				<h2>Form is Invalid</h2>
-				<ul>
-					<% for message in @user.errors.full_messages %>
-					<li><%= message %></li>
-					<% end %>
-				</ul>
-			</div>
-			<% end %>
-			<p class="signupfield">
-				<%= f.label :first_name %><br />
-				<%= f.text_field :first_name %>
-			</p>
-			<p class="signupfield">
-				<%= f.label :last_name %><br />
-				<%= f.text_field :last_name %>
-			</p>
-			<p class="signupfield">
-				<%= f.label :email %><br />
-				<%= f.text_field :email %>
-			</p>
-			<p class="signupfield">
-				<%= f.label :password %><br />
-				<%= f.password_field :password %>
-			</p>
-			<p class="signupfield">
-				<%= f.label :password_confirmation %><br />
-				<%= f.password_field :password_confirmation %>
-			</p>
-
-
-			Mac<%= f.check_box :mac %>OR
-			<%= f.check_box :pc %>PC<br />
-			iPhone<%= f.check_box :iphone %>OR
-			<%= f.check_box :android %>Android<br />
-			Democrat<%= f.check_box :democrat %>OR
-			<%= f.check_box :republican %>Republican<br />
-			Star Wars<%= f.check_box :starWars %>OR
-			<%= f.check_box :starTrek %>Star Trek<br />
-			Coke<%= f.check_box :coke %>OR
-			<%= f.check_box :pepsi %>Pepsi<br />
-			Team Edward<%= f.check_box :teamEdward %>OR
-			<%= f.check_box :teamJacob %>Team Jacob<br />
-			Harry Potter<%= f.check_box :harrypotter %>OR
-			<%= f.check_box :gameofthrones %>Game Of Thrones<br />
-
-			<%= f.file_field :image %> 
-			Pictchyaaa
-			<%= f.submit "Create User" %> 
-
-			
-			<% end %>
-
+	<div class="row form-group">
+		<div class="col-xs-12">
+			<ul class="nav nav-pills nav-justified thumbnail setup-panel">
+				<li class="active"><a href="#step-1">
+					<h4 class="list-group-item-heading">Register</h4>
+					<p class="list-group-item-text">Create your user profile</p>
+				</a></li>
+				<li class="disabled"><a href="#step-2">
+					<h4 class="list-group-item-heading">Interests</h4>
+					<p class="list-group-item-text">Define what interests you</p>
+				</a></li>
+				<li class="disabled"><a href="#step-3">
+					<h4 class="list-group-item-heading">Picture</h4>
+					<p class="list-group-item-text">Upload your headshot!</p>
+				</a></li>
+			</ul>
 		</div>
 	</div>
+	<div class="row-setup-content" id="step-1">
+		<div class="col-xs-12">
+			<div class="col-md-12 well text-center">
+				<h1> REGISTER</h1>
+				<div class="signupform">
+					<%= form_for @user do |f| %>
+					<% if @user.errors.any? %>
+					<div class="error messages">
+						<h2>Form is Invalid</h2>
+						<ul>
+							<% for message in @user.errors.full_messages %>
+							<li><%= message %></li>
+							<% end %>
+						</ul>
+					</div>
+					<% end %>
+					<p class="signupfield">
+						<%= f.label :first_name %><br />
+						<%= f.text_field :first_name %>
+					</p>
+					<p class="signupfield">
+						<%= f.label :last_name %><br />
+						<%= f.text_field :last_name %>
+					</p>
+					<p class="signupfield">
+						<%= f.label :email %><br />
+						<%= f.text_field :email %>
+					</p>
+					<p class="signupfield">
+						<%= f.label :password %><br />
+						<%= f.password_field :password %>
+					</p>
+					<p class="signupfield">
+						<%= f.label :password_confirmation %><br />
+						<%= f.password_field :password_confirmation %>
+					</p>
 
-	
-</center>
+					<button id="activate-step-2" class="btn btn-primary btn-lg" href="#step-2">Continue</button>
+				</div>
+			</div>
+		</div>
+		<div class="row-setup-content" id="step-2">
+			<div class="col-xs-12">
+				<div class="col-md-12 well">
+					<h1 class="text-center"> Interests</h1>
+					<center>
+					Mac<%= f.check_box :mac %>OR
+					<%= f.check_box :pc %>PC<br />
+					iPhone<%= f.check_box :iphone %>OR
+					<%= f.check_box :android %>Android<br />
+					Democrat<%= f.check_box :democrat %>OR
+					<%= f.check_box :republican %>Republican<br />
+					Star Wars<%= f.check_box :starWars %>OR
+					<%= f.check_box :starTrek %>Star Trek<br />
+					Coke<%= f.check_box :coke %>OR
+					<%= f.check_box :pepsi %>Pepsi<br />
+					Team Edward<%= f.check_box :teamEdward %>OR
+					<%= f.check_box :teamJacob %>Team Jacob<br />
+					Harry Potter<%= f.check_box :harrypotter %>OR
+					<%= f.check_box :gameofthrones %>Game Of Thrones<br />
+					<br/>
+					<button id="activate-step-3" class="btn btn-primary btn-lg" href="#step-3">Continue</button>
+				</center>
+				</div>
+			</div>
+		</div>
+		<div class="row-setup-content" id="step-3">
+			<div class="col-xs-12">
+				<div class="col-md-12 well">
+					<center>
+					<h1 class="text-center">Picture</h1>
+					<%= f.file_field :image %> <br />
+					
+				</center>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

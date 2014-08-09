@@ -1,7 +1,12 @@
+@import 'bootstrap';
+
+/* --------------------------- HOMEPAGE VIDEO --------------------------- */ 
+
+
 .video-section .pattern-overlay {
 background-color: rgba(44, 62, 80,0.8);
 padding: 110px 0 32px;
-min-height: 650px; 
+min-height: 900px; 
 /* Incase of overlay problems just increase the min-height*/
 }
 .video-section h1, .video-section h3{
@@ -37,13 +42,30 @@ margin-top: 3%;
 .video-section .buttonBar{display:none;}
 .player {font-size: 1px;}
 
+/* ---------------------------   --------------------------- */ 
+
+.container {
+    padding-top: 125px;
+}
+
+.row-setup-content {
+    margin-top: -129px;
+}
+a.list-group-item {
+    height:auto;
+    min-height:220px;
+}
+a.list-group-item.active small {
+    color:#fff;
+}
+
 
 // $body-bg: #2c3e50;
 // // $navbar-inverse-bg: #27ae60;
 // // $navbar-inverse-link-color: white;
 // $brand-primary: #e74c3c;
 
-@import 'bootstrap';
+
 
 // body {
 
