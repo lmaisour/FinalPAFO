@@ -9,7 +9,7 @@ gem "paperclip", "~> 4.1"
 gem 'bootstrap-sass'
 
 gem "mongoid-paperclip", :require => "mongoid_paperclip"
-gem 'aws-sdk', '~> 1.3.4'
+# gem 'aws-sdk', '~> 1.3.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'

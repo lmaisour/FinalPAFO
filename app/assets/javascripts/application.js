@@ -15,6 +15,12 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+$(document).ready(function () {
+
+    $(".player").mb_YTPlayer();
+
+});
+
 
 $(function(){
 var textfield = $("input[name=user]");

@@ -1,349 +1,585 @@
+.video-section .pattern-overlay {
+background-color: rgba(44, 62, 80,0.8);
+padding: 110px 0 32px;
+min-height: 650px; 
+/* Incase of overlay problems just increase the min-height*/
+}
+.video-section h1, .video-section h3{
+text-align:center;
+color:#fff;
+}
+.video-section h1{
+font-size:55px;
+font-family: 'Buenard', serif;
+font-weight:bold;
+text-transform: uppercase;
+margin: 40px auto 0px;
+text-shadow: 1px 1px 1px #000;
+-webkit-text-shadow: 1px 1px 1px #000;
+-moz-text-shadow: 1px 1px 1px #000;
+}
+.video-section h3{
+font-size: 25px;
+font-weight:lighter;
+margin: 0px auto 15px;
+}
+
+.row {
+margin-top: 11%;
+}
+
+.homebutton {
+margin-left: 40%;
+margin-top: 3%;
+}
 
 
-$body-bg: #2c3e50;
-// $navbar-inverse-bg: #27ae60;
-// $navbar-inverse-link-color: white;
-$brand-primary: #e74c3c;
+.video-section .buttonBar{display:none;}
+.player {font-size: 1px;}
+
+
+// $body-bg: #2c3e50;
+// // $navbar-inverse-bg: #27ae60;
+// // $navbar-inverse-link-color: white;
+// $brand-primary: #e74c3c;
 
 @import 'bootstrap';
 
-body {
-
-}
-
-.container {
-    background-image:url("http://i.imgur.com/QWv6Qbk.jpg");
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 900px;
-    box-shadow: inset 0 0 0 900px rgba(44, 62, 80,.9);
-    background-size: contain;
-    position: fixed;
-}
-.signup {
-    padding-top: 50px;
-    text-align: center;
-    height: 1000px;
-    width: 460px;
-    margin-left: 32%;
-    position: fixed;
-}
-#pitch-text {
-    font-family: 'Lato', sans-serif;
-    border: 5px solid white;
-    background-color: rgba(243, 156, 18,.8);
-    border-radius: 3px;
-    width: 350px;
-    margin-top: 35%;
-}
-p.homepagetext {
-    color:#e74c3c;
-    font-size: 24px;
-    line-height: 300%;
-}
-p.homepagetext#list {
-    color:white;
-    font-size: 16px;
-    line-height: 300%;
-}
-h1 {
-    font-size: 82px;
-    color: white;
-    text-align: -webkit-center;
-    width: 900px;
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.9);
-}
-h2 {
-    color: white;
-
-}
-
-.signuptext{
-    margin-left: -45%;
-    margin-top: 16%;
-}
-
-a.navbar-brand {
-    font-family: 'Lato', sans-serif;
-    font-size: 24px;
-    margin-left: 100px;
-    color: #e74c3c;
-    margin-top: 8%;
-}
-.navbar {
-    height: 100px;
-    background-color: white;
-    margin-bottom: -1px;
-    border-bottom: 1px solid black;
-}
-li.loginlink {
-    border: 1px solid black;
-    border-radius: 4px;
-    margin-top: 19%;
-    margin-right: 46px;
-}
-
-li {
-    color: white;
-    font-size: 18px;
-}
-.signupform{
-    background-color: #bdc3c7;
-    // height: 600px;
-}
-.userslist {
-    color: black;
-}
-
-#eventcontainer
-{
-    float: left;
-    width: 100%;
-    background: #FFF url(layout-two-liquid-background.gif) repeat-y 68% 0;
-}
-
-#content
-{
-    clear: right;
-    float: right;
-    width: 60%;
-    padding: 20px 0;
-    margin: 0 0 0 4%;
-    display: inline;
-}
-
-#content h2 { margin: 0; }
-
-#aside
-{
-    float: right;
-    width: 26%;
-    padding: 20px 0;
-    margin: 0 3% 0 0;
-    display: inline;
-    border-right: 1px solid white;
-}
-
-#aside h3 { margin: 0; }
-
-/* CSS used here will be applied after bootstrap.css */
-
-.productbox {
-    position: relative;
- border: 1px solid #ddd;
-border-radius: 4px;
--webkit-transition: all .2s ease-in-out; 
-}
-.caption {
-    padding:10px;
-    background-color:rgba(0,0,0,0.7);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    max-height: 40%;
-    overflow: hidden;
-    font-size: 11px;
-  color: #FFF;
-
-}
-.finalprice {
-  font-size:15px;
-    color: #AAFCAE;
-}
-h5 {
-  margin-top: 0px;
-  color: white;
-  max-height: 30px;
-  overflow: hidden;
-}
-.img-responsive img{
-    width: 100%;    
-}
-.container {
-    width: 100%;
-}
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
-  padding: 5px;
-}
-.btn-block {
-margin-top: 5px;
-}
-.saleoffrate{
-position: absolute;
-    top:10px;
-    left: 10px;
-padding-top: 13px;
-text-align:center;
-background-color: rgba(76, 174, 76,0.8);
-color: #FFFFFF;
-border-radius: 50%;
-height: 50px;
-width: 50px;
-line-height: 13px;
-}
-@media (min-width: 384px) and (max-width: 768px) {
-  .img-responsive img{
-      max-width: 50%;
-  }
-  .img-responsive{
-      text-align: center;
-  }  
-}
-.stitle {
-    background-color: pink;
-    text-align: center;
-}
-.swhen {
-    background-color: orange;
-    text-align: center;
-}
-.productbox {
-    background-color: pink;
-}
-.events {
-    margin-left: 25%;
-}
-.row {
-    width: 1500px;
-}
-
-
- /*----------------------- LOGIN PAGE TEMPLATE ---------------------- */
-
-
-// html,body{
-//     position: relative;
-//     height: 100%;
-// }
-
-// .login-container{
-//     position: relative;
-//     width: 300px;
-//     margin: 80px auto;
-//     padding: 20px 40px 40px;
-//     text-align: center;
-//     background: #fff;
-//     border: 1px solid #ccc;
-// }
-
-// #output{
-//     position: absolute;
-//     width: 300px;
-//     top: -75px;
-//     left: 0;
-//     color: #fff;
-// }
-
-// #output.alert-success{
-//     background: rgb(25, 204, 25);
-// }
-
-// #output.alert-danger{
-//     background: rgb(228, 105, 105);
-// }
-
-
-// .login-container::before,.login-container::after{
-//     content: "";
-//     position: absolute;
-//     width: 100%;height: 100%;
-//     top: 3.5px;left: 0;
-//     background: #fff;
-//     z-index: -1;
-//     -webkit-transform: rotateZ(4deg);
-//     -moz-transform: rotateZ(4deg);
-//     -ms-transform: rotateZ(4deg);
-//     border: 1px solid #ccc;
+// body {
 
 // }
 
-// .login-container::after{
-//     top: 5px;
-//     z-index: -2;
-//     -webkit-transform: rotateZ(-2deg);
-//      -moz-transform: rotateZ(-2deg);
-//       -ms-transform: rotateZ(-2deg);
-
-// }
-
-// .avatar{
-//     width: 100px;height: 100px;
-//     margin: 10px auto 30px;
-//     border-radius: 100%;
-//     border: 2px solid #aaa;
-//     background-size: cover;
-// }
-
-// .form-box input{
+// .container {
+//     background-image:url("http://i.imgur.com/QWv6Qbk.jpg");
+//     background-repeat: no-repeat;
 //     width: 100%;
-//     padding: 10px;
+//     height: 900px;
+//     box-shadow: inset 0 0 0 900px rgba(44, 62, 80,.9);
+//     background-size: contain;
+//     position: fixed;
+// }
+// .signup {
+//     padding-top: 50px;
 //     text-align: center;
-//     height:40px;
-//     border: 1px solid #ccc;;
-//     background: #fafafa;
-//     transition:0.2s ease-in-out;
+//     height: 1000px;
+//     width: 460px;
+//     margin-left: 32%;
+//     position: fixed;
+// }
+// #pitch-text {
+//     font-family: 'Lato', sans-serif;
+//     border: 5px solid white;
+//     background-color: rgba(243, 156, 18,.8);
+//     border-radius: 3px;
+//     width: 350px;
+//     margin-top: 35%;
+// }
+// p.homepagetext {
+//     color:#e74c3c;
+//     font-size: 24px;
+//     line-height: 300%;
+// }
+// p.homepagetext#list {
+//     color:white;
+//     font-size: 16px;
+//     line-height: 300%;
+// }
+// h1 {
+//     font-size: 82px;
+//     color: white;
+//     text-align: -webkit-center;
+//     width: 900px;
+//     text-shadow: 2px 4px 3px rgba(0,0,0,0.9);
+// }
+// h2 {
+//     color: white;
 
 // }
 
-// .form-box input:focus{
-//     outline: 0;
-//     background: #eee;
+// .signuptext{
+//     margin-left: -45%;
+//     margin-top: 16%;
 // }
 
-// .form-box input[type="text"]{
-//     border-radius: 5px 5px 0 0;
-//     text-transform: lowercase;
+// a.navbar-brand {
+//     font-family: 'Lato', sans-serif;
+//     font-size: 24px;
+//     margin-left: 100px;
+//     color: #e74c3c;
+//     margin-top: 8%;
+// }
+// .navbar {
+//     height: 100px;
+//     background-color: white;
+//     margin-bottom: -1px;
+//     border-bottom: 1px solid black;
+// }
+// li.loginlink {
+//     border: 1px solid black;
+//     border-radius: 4px;
+//     margin-top: 19%;
+//     margin-right: 46px;
 // }
 
-// .form-box input[type="password"]{
-//     border-radius: 0 0 5px 5px;
-//     border-top: 0;
+// li {
+//     color: white;
+//     font-size: 18px;
+// }
+// .signupform{
+//     background-color: #bdc3c7;
+//     // height: 600px;
+// }
+// .userslist {
+//     color: black;
 // }
 
-// .form-box button.login{
-//     margin-top:15px;
-//     padding: 10px 20px;
+// #eventcontainer
+// {
+//     float: left;
+//     width: 100%;
+//     background: #FFF url(layout-two-liquid-background.gif) repeat-y 68% 0;
 // }
 
-// .animated {
-//   -webkit-animation-duration: 1s;
-//   animation-duration: 1s;
-//   -webkit-animation-fill-mode: both;
-//   animation-fill-mode: both;
+// #content
+// {
+//     clear: right;
+//     float: right;
+//     width: 60%;
+//     padding: 20px 0;
+//     margin: 0 0 0 4%;
+//     display: inline;
 // }
 
-// @-webkit-keyframes fadeInUp {
-//   0% {
-//     opacity: 0;
-//     -webkit-transform: translateY(20px);
-//     transform: translateY(20px);
+// #content h2 { margin: 0; }
+
+// #aside
+// {
+//     float: right;
+//     width: 26%;
+//     padding: 20px 0;
+//     margin: 0 3% 0 0;
+//     display: inline;
+//     border-right: 1px solid white;
+// }
+
+// #aside h3 { margin: 0; }
+
+// /* CSS used here will be applied after bootstrap.css */
+
+// .productbox {
+//     position: relative;
+//  border: 1px solid #ddd;
+// border-radius: 4px;
+// -webkit-transition: all .2s ease-in-out; 
+// }
+// .caption {
+//     padding:10px;
+//     background-color:rgba(0,0,0,0.7);
+//     position: absolute;
+//     bottom: 0;
+//     width: 100%;
+//     max-height: 40%;
+//     overflow: hidden;
+//     font-size: 11px;
+//   color: #FFF;
+
+// }
+// .finalprice {
+//   font-size:15px;
+//     color: #AAFCAE;
+// }
+// h5 {
+//   margin-top: 0px;
+//   color: white;
+//   max-height: 30px;
+//   overflow: hidden;
+// }
+// .img-responsive img{
+//     width: 100%;    
+// }
+// .container {
+//     width: 100%;
+// }
+// .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+//   padding: 5px;
+// }
+// .btn-block {
+// margin-top: 5px;
+// }
+// .saleoffrate{
+// position: absolute;
+//     top:10px;
+//     left: 10px;
+// padding-top: 13px;
+// text-align:center;
+// background-color: rgba(76, 174, 76,0.8);
+// color: #FFFFFF;
+// border-radius: 50%;
+// height: 50px;
+// width: 50px;
+// line-height: 13px;
+// }
+// @media (min-width: 384px) and (max-width: 768px) {
+//   .img-responsive img{
+//       max-width: 50%;
 //   }
-
-//   100% {
-//     opacity: 1;
-//     -webkit-transform: translateY(0);
-//     transform: translateY(0);
-//   }
+//   .img-responsive{
+//       text-align: center;
+//   }  
 // }
+//     @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+//     @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+//     body {
+//         padding: 60px 0px;
+//         background-color: rgb(220, 220, 220);
+//     }
+    
+//     .event-list {
+//         list-style: none;
+//         font-family: 'Lato', sans-serif;
+//         margin: 0px;
+//         padding: 0px;
+//     }
+//     .event-list > li {
+//         background-color: rgb(255, 255, 255);
+//         box-shadow: 0px 0px 5px rgb(51, 51, 51);
+//         box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+//         padding: 0px;
+//         margin: 0px 0px 20px;
+//     }
+//     .event-list > li > time {
+//         display: inline-block;
+//         width: 100%;
+//         color: rgb(255, 255, 255);
+//         background-color: rgb(197, 44, 102);
+//         padding: 5px;
+//         text-align: center;
+//         text-transform: uppercase;
+//     }
+//     .event-list > li:nth-child(even) > time {
+//         background-color: rgb(165, 82, 167);
+//     }
+//     .event-list > li > time > span {
+//         display: none;
+//     }
+//     .event-list > li > time > .day {
+//         display: block;
+//         font-size: 56pt;
+//         font-weight: 100;
+//         line-height: 1;
+//     }
+//     .event-list > li time > .month {
+//         display: block;
+//         font-size: 24pt;
+//         font-weight: 900;
+//         line-height: 1;
+//     }
+//     .event-list > li > img {
+//         width: 100%;
+//     }
+//     .event-list > li > .info {
+//         padding-top: 5px;
+//         text-align: center;
+//     }
+//     .event-list > li > .info > .title {
+//         font-size: 17pt;
+//         font-weight: 700;
+//         margin: 0px;
+//     }
+//     .event-list > li > .info > .desc {
+//         font-size: 13pt;
+//         font-weight: 300;
+//         margin: 0px;
+//     }
+//     .event-list > li > .info > ul,
+//     .event-list > li > .social > ul {
+//         display: table;
+//         list-style: none;
+//         margin: 10px 0px 0px;
+//         padding: 0px;
+//         width: 100%;
+//         text-align: center;
+//     }
+//     .event-list > li > .social > ul {
+//         margin: 0px;
+//     }
+//     .event-list > li > .info > ul > li,
+//     .event-list > li > .social > ul > li {
+//         display: table-cell;
+//         cursor: pointer;
+//         color: rgb(30, 30, 30);
+//         font-size: 11pt;
+//         font-weight: 300;
+//         padding: 3px 0px;
+//     }
+//     .event-list > li > .info > ul > li > a {
+//         display: block;
+//         width: 100%;
+//         color: rgb(30, 30, 30);
+//         text-decoration: none;
+//     } 
+//     .event-list > li > .social > ul > li {    
+//         padding: 0px;
+//     }
+//     .event-list > li > .social > ul > li > a {
+//         padding: 3px 0px;
+//     } 
+//     .event-list > li > .info > ul > li:hover,
+//     .event-list > li > .social > ul > li:hover {
+//         color: rgb(30, 30, 30);
+//         background-color: rgb(200, 200, 200);
+//     }
+//     .facebook a,
+//     .twitter a,
+//     .google-plus a {
+//         display: block;
+//         width: 100%;
+//         color: rgb(75, 110, 168) !important;
+//     }
+//     .twitter a {
+//         color: rgb(79, 213, 248) !important;
+//     }
+//     .google-plus a {
+//         color: rgb(221, 75, 57) !important;
+//     }
+//     .facebook:hover a {
+//         color: rgb(255, 255, 255) !important;
+//         background-color: rgb(75, 110, 168) !important;
+//     }
+//     .twitter:hover a {
+//         color: rgb(255, 255, 255) !important;
+//         background-color: rgb(79, 213, 248) !important;
+//     }
+//     .google-plus:hover a {
+//         color: rgb(255, 255, 255) !important;
+//         background-color: rgb(221, 75, 57) !important;
+//     }
 
-// @keyframes fadeInUp {
-//   0% {
-//     opacity: 0;
-//     -webkit-transform: translateY(20px);
-//     -ms-transform: translateY(20px);
-//     transform: translateY(20px);
-//   }
+//     @media (min-width: 768px) {
+//         .event-list > li {
+//             position: relative;
+//             display: block;
+//             width: 100%;
+//             height: 120px;
+//             padding: 0px;
+//         }
+//         .event-list > li > time,
+//         .event-list > li > img  {
+//             display: inline-block;
+//         }
+//         .event-list > li > time,
+//         .event-list > li > img {
+//             width: 120px;
+//             float: left;
+//         }
+//         .event-list > li > .info {
+//             background-color: rgb(245, 245, 245);
+//             overflow: hidden;
+//         }
+//         .event-list > li > time,
+//         .event-list > li > img {
+//             width: 120px;
+//             height: 120px;
+//             padding: 0px;
+//             margin: 0px;
+//         }
+//         .event-list > li > .info {
+//             position: relative;
+//             height: 120px;
+//             text-align: left;
+//             padding-right: 40px;
+//         }   
+//         .event-list > li > .info > .title, 
+//         .event-list > li > .info > .desc {
+//             padding: 0px 10px;
+//         }
+//         .event-list > li > .info > ul {
+//             position: absolute;
+//             left: 0px;
+//             bottom: 0px;
+//         }
+//         .event-list > li > .social {
+//             position: absolute;
+//             top: 0px;
+//             right: 0px;
+//             display: block;
+//             width: 40px;
+//         }
+//         .event-list > li > .social > ul {
+//             border-left: 1px solid rgb(230, 230, 230);
+//         }
+//         .event-list > li > .social > ul > li {          
+//             display: block;
+//             padding: 0px;
+//         }
+//         .event-list > li > .social > ul > li > a {
+//             display: block;
+//             width: 40px;
+//             padding: 10px 0px 9px;
+//         }
+//     }
 
-//   100% {
-//     opacity: 1;
-//     -webkit-transform: translateY(0);
-//     -ms-transform: translateY(0);
-//     transform: translateY(0);
-//   }
-// }
+// // .stitle {
+// //     background-color: pink;
+// //     text-align: center;
+// // }
+// // .swhen {
+// //     background-color: orange;
+// //     text-align: center;
+// // }
+// // .productbox {
+// //     background-color: pink;
+// // }
+// // .events {
+// //     // margin-left: 25%;
+// // }
+// // .row {
 
-// .fadeInUp {
-//   -webkit-animation-name: fadeInUp;
-//   animation-name: fadeInUp;
-// }
+// // }
+// // .col-md-6 {
+
+// // }
+// // .signin {
+// //     width: 500px;
+// // }
+
+
+//  /*----------------------- LOGIN PAGE TEMPLATE ---------------------- */
+
+
+// // html,body{
+// //     position: relative;
+// //     height: 100%;
+// // }
+
+// // .login-container{
+// //     position: relative;
+// //     width: 300px;
+// //     margin: 80px auto;
+// //     padding: 20px 40px 40px;
+// //     text-align: center;
+// //     background: #fff;
+// //     border: 1px solid #ccc;
+// // }
+
+// // #output{
+// //     position: absolute;
+// //     width: 300px;
+// //     top: -75px;
+// //     left: 0;
+// //     color: #fff;
+// // }
+
+// // #output.alert-success{
+// //     background: rgb(25, 204, 25);
+// // }
+
+// // #output.alert-danger{
+// //     background: rgb(228, 105, 105);
+// // }
+
+
+// // .login-container::before,.login-container::after{
+// //     content: "";
+// //     position: absolute;
+// //     width: 100%;height: 100%;
+// //     top: 3.5px;left: 0;
+// //     background: #fff;
+// //     z-index: -1;
+// //     -webkit-transform: rotateZ(4deg);
+// //     -moz-transform: rotateZ(4deg);
+// //     -ms-transform: rotateZ(4deg);
+// //     border: 1px solid #ccc;
+
+// // }
+
+// // .login-container::after{
+// //     top: 5px;
+// //     z-index: -2;
+// //     -webkit-transform: rotateZ(-2deg);
+// //      -moz-transform: rotateZ(-2deg);
+// //       -ms-transform: rotateZ(-2deg);
+
+// // }
+
+// // .avatar{
+// //     width: 100px;height: 100px;
+// //     margin: 10px auto 30px;
+// //     border-radius: 100%;
+// //     border: 2px solid #aaa;
+// //     background-size: cover;
+// // }
+
+// // .form-box input{
+// //     width: 100%;
+// //     padding: 10px;
+// //     text-align: center;
+// //     height:40px;
+// //     border: 1px solid #ccc;;
+// //     background: #fafafa;
+// //     transition:0.2s ease-in-out;
+
+// // }
+
+// // .form-box input:focus{
+// //     outline: 0;
+// //     background: #eee;
+// // }
+
+// // .form-box input[type="text"]{
+// //     border-radius: 5px 5px 0 0;
+// //     text-transform: lowercase;
+// // }
+
+// // .form-box input[type="password"]{
+// //     border-radius: 0 0 5px 5px;
+// //     border-top: 0;
+// // }
+
+// // .form-box button.login{
+// //     margin-top:15px;
+// //     padding: 10px 20px;
+// // }
+
+// // .animated {
+// //   -webkit-animation-duration: 1s;
+// //   animation-duration: 1s;
+// //   -webkit-animation-fill-mode: both;
+// //   animation-fill-mode: both;
+// // }
+
+// // @-webkit-keyframes fadeInUp {
+// //   0% {
+// //     opacity: 0;
+// //     -webkit-transform: translateY(20px);
+// //     transform: translateY(20px);
+// //   }
+
+// //   100% {
+// //     opacity: 1;
+// //     -webkit-transform: translateY(0);
+// //     transform: translateY(0);
+// //   }
+// // }
+
+// // @keyframes fadeInUp {
+// //   0% {
+// //     opacity: 0;
+// //     -webkit-transform: translateY(20px);
+// //     -ms-transform: translateY(20px);
+// //     transform: translateY(20px);
+// //   }
+
+// //   100% {
+// //     opacity: 1;
+// //     -webkit-transform: translateY(0);
+// //     -ms-transform: translateY(0);
+// //     transform: translateY(0);
+// //   }
+// // }
+
+// // .fadeInUp {
+// //   -webkit-animation-name: fadeInUp;
+// //   animation-name: fadeInUp;
+// // }
 
