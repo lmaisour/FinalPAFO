@@ -14,4 +14,5 @@ class Event
 
   
   has_many :users
+  has_many :interests
 end

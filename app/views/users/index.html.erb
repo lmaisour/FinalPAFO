@@ -1,12 +1,19 @@
-<h1> User List </h1>
-<div class="signupform">
-<ul>
-	<% @users.each do |s| %>
-
-	<li class="userslist"><%= s.first_name %></li> -- <%= link_to "Show more details!", user_path(s) %>
-
-<% end %>
-</ul>
-
-<%= link_to "Add A New User", 'users/new' %>
+<div class="container">
+	<div class="row">
+			<h1> User List </h1>
+        <div class="span12">
+    		<ul class="thumbnails">
+    			<% @users.each do |s| %>
+                  <div class="thumbnail clearfix">
+                    <img src="http://placehold.it/320x200" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                     <!-- <%= image_tag(s.image.url) %> -->
+                    <div class="caption" class="pull-left">
+                    	<h3><%= s.first_name %> <%= s.last_name %></h3>
+                      <button><%= link_to "Show more details!", user_path(s) %></button>
+                    </div>
+                  </div> 
+                  <% end %>              
+            </ul>
+        </div>
+	</div>
 </div>

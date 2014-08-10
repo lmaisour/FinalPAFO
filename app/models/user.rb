@@ -3,7 +3,11 @@ class User
 	include ActiveModel::SecurePassword
     include Mongoid::Paperclip
 
-	has_mongoid_attached_file :image 
+	has_mongoid_attached_file :image, 
+	:styles => { 
+		:medium   => ['250x250',    :jpg]
+	}
+
 	validates_attachment_content_type :image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 	
 
@@ -47,4 +51,5 @@ class User
 	field :backend, type: Mongoid::Boolean
 
 	has_many :events
+	has_many :interests
 end

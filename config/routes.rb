@@ -5,12 +5,9 @@ Rails.application.routes.draw do
 
    # ----------------------- USERS RESTFUL ROUTE -------------------------#
 
-
-  get "sign up" => "users#new"
-  get "login" => "pages#login"
-  get "signup" => "pages#signup"
-
   resource :session, only: [:new, :create, :destroy]
+  
+  # get "sign up" => "users#new"
   
   get 'users/' => 'users#index'
   get 'users/new' => 'users#new' 
