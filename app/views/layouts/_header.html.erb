@@ -14,13 +14,13 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-          <li>
+          <div class="logbutton">
               <%= link_to 'LOG OUT', session_path, method: :delete %>
-          </li>
+          </div>
         <% else %>
-              <li>
-                <%= link_to 'LOG IN', new_session_path  %>   
-              </li>
+            <div class="logbutton">
+              <%= link_to 'LOG IN', new_session_path  %>   
+            </div>
         <% end %>
 
 

@@ -1,11 +1,35 @@
-<h1><%= @event.name %></h1>
+<div class="container">
+	<div class="row">
+		<div class="well">
+			<h1 class="text-center"><%= @event.name %> At <%= @event.place %> Restaurant! </h1>
+			<div class="list-group">
+				<a class="list-group-item ">
+					<div class="media col-md-3">
+						<figure class="pull-left">
+							<img class="media-object img-rounded img-responsive"  src="http://placehold.it/350x250" alt="placehold.it/350x250" >
+						</figure>
+					</div>
+					<div class="col-md-6">
+						<h2 class="list-group-item-heading"> </h2>
+						<p class="list-group-item-text"> 
+							<%= @event.description %>
+						</p>
+						<div class="participants">
+							<p class="list-group-item-text">
+								<h3>Check Out Who's Going</h3>
+							</div>
 
-<div class="signupform">
-<p>This event's name is <%= @event.name %> <%= @event.name %>, and his/her email is <%= @event.place %> </p>
+						</div>
+						<div class="col-md-3 text-center">
+							<h2> <%= @event.when %> <small> $<%= @event.price %>.00 </small></h2>
+							<button type="button" class="btn btn-default btn-lg btn-block"> More Info </button>
+							<button type="button" class="btn btn-warning btn-lg btn-block"> Join </button>
+						</div>
+						
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
 
-<span> client.business('yelp-san-francisco')
-
-<%= link_to "Delete this event!", :event, method: :delete %>
-
-<%= link_to "Back to the list!", events_path %>
-</div>

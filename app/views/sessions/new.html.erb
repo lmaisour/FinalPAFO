@@ -1,30 +1,30 @@
-<h1>REGISTRATION</h1>
-
-<center>
-	<div class = "newusercontainer">
-		<div class="signupform">
-			<%= form_for @user, {url: session_path } do |f| %>
-			<% if @user.errors.any? %>
-			<div class="error messages">
-				<h2>Form is Invalid</h2>
-				<ul>
-					<% for message in @user.errors.full_messages %>
-					<li><%= message %></li>
-					<% end %>
-				</ul>
+<div class = "container">
+	<div class="row">
+		<%= form_for @user, {url: session_path } do |f| %>
+			</ul>
+		</div>
+		<div class="col-md-4 col-md-offset-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title"><center>Please sign in</center></h3>
+				</div>
+				<div class="panel-body">
+					<form accept-charset="UTF-8" role="form">
+						<fieldset>
+							<div class="form-group">
+								<%= f.text_field :email, placeholder: "Email", class: 'form-control' %>
+							</div>
+							<div class="form-group">
+								<%= f.password_field :password, placeholder: "Password", class: 'form-control' %>
+							</div>
+							<div class="checkbox">
+							</div>
+							<%= f.submit "Login", class: "btn btn-lg btn-success btn-block" %>
+						</fieldset>
+					</form>
+				</div>
 			</div>
-			<% end %>
-			<p class="signupfield">
-				<%= f.label :email %><br />
-				<%= f.text_field :email %>
-			</p>
-			<p class="signupfield">
-				<%= f.label :password %><br />
-				<%= f.password_field :password %>
-			</p>
-			<p class="button"><%= f.submit %></p>
 		</div>
 	</div>
 	<% end %>
-
-</center>
+</div>

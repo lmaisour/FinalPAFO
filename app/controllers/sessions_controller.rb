@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 		if u && u.authenticate(params[:user][:password])
 			# sets the cookie to the browser
 			session[:user_id] = u.id.to_s
-			redirect_to root_path
+			redirect_to events_path
 		elsif 
 			if u && u.authenticate(params[:user][:password][:is_admin])
 			session[:user_id] = u.id.to_s
