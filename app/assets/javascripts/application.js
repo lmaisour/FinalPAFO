@@ -15,11 +15,7 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
-$(document).ready(function () {
 
-    $(".player").mb_YTPlayer();
-
-});
 
 $(document).ready(function() {
     
@@ -45,27 +41,41 @@ $(document).ready(function() {
     $('ul.setup-panel li.active a').trigger('click');
     
     // DEMO ONLY //
-    $('#activate-step-2').on('click', function(e) {
-        $('ul.setup-panel li:eq(1)').removeClass('disabled');
-        $('ul.setup-panel li a[href="#step-2"]').trigger('click');
-        $(this).remove();
-    })    
+    // $('#activate-step-2').on('click', function(e) {
+    //     $('ul.setup-panel li:eq(1)').removeClass('disabled');
+    //     $('ul.setup-panel li a[href="#step-2"]').trigger('click');
+    //     $(this).remove();
+    // })   
+    //  $('#activate-step-3').on('click', function(e) {
+    //     $('ul.setup-panel li:eq(1)').removeClass('disabled');
+    //     $('ul.setup-panel li a[href="#step-3"]').trigger('click');
+    //     $(this).remove();
+    // })   
+});
 
 
-        var terms = $("ul li");
+
+
+
+$(document).ready(function () {
+
+    $(".player").mb_YTPlayer();
+
+
+    var terms = $("ul li");
 
     function rotateTerm() {
 
-     var ct = $("#rotate").data("term") || 0;
+       var ct = $("#rotate").data("term") || 0;
 
-     console.log(terms.eq([ct]).text());
-     
-      $("#rotate").data("term", 
+       console.log(terms.eq([ct]).text());
+
+       $("#rotate").data("term", 
         ct == terms.length -1 ? 0 : ct + 1).text(terms.eq([ct]).text())
-      .fadeIn().delay(2000).fadeOut(200, rotateTerm);
+       .fadeIn().delay(2000).fadeOut(200, rotateTerm);
 
-    }
-    $(rotateTerm);
+   }
+   $(rotateTerm);
 });
 
 

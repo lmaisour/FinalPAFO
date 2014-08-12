@@ -1,0 +1,8 @@
+<%= link_to "Delete This User", :user, method: :delete, data: { confirm: "Are you sure you want to delete #{@user.first_name}?"} %>
+<br />
+
+<%= link_to "Edit this user!", edit_user_path %>
+
+<br />
+
+<%= link_to "Back to the list!", users_path %>

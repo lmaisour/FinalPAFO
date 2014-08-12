@@ -20,7 +20,7 @@
 	<div class="row-setup-content" id="step-1">
 		<div class="col-xs-12">
 			<div class="col-md-12 well text-center">
-				<h1> REGISTER</h1>
+				<h1> LOGIN DETAILS</h1>
 				<div class="signupform">
 					<%= form_for @user do |f| %>
 					<% if @user.errors.any? %>
@@ -33,27 +33,24 @@
 						</ul>
 					</div>
 					<% end %>
-					<p class="signupfield">
-						<%= f.label :first_name %><br />
-						<%= f.text_field :first_name %>
-					</p>
-					<p class="signupfield">
-						<%= f.label :last_name %><br />
-						<%= f.text_field :last_name %>
-					</p>
-					<p class="signupfield">
-						<%= f.label :email %><br />
-						<%= f.text_field :email %>
-					</p>
-					<p class="signupfield">
-						<%= f.label :password %><br />
-						<%= f.password_field :password %>
-					</p>
-					<p class="signupfield">
-						<%= f.label :password_confirmation %><br />
-						<%= f.password_field :password_confirmation %>
-					</p>
-
+					<div class="signupfields">
+						<p class="signupfield">
+							<%= f.text_field :email, placeholder: "First Name", class: 'form-control' %>
+						</p>
+						<p class="signupfield">
+							
+							<%= f.text_field :last_name, placeholder: "Last Name", class: 'form-control' %>
+						</p>
+						<p class="signupfield">
+							<%= f.text_field :email, placeholder: "Email", class: 'form-control' %>
+						</p>
+						<p class="signupfield">
+							<%= f.password_field :password, placeholder: "Password", class: 'form-control' %>
+						</p>
+						<p class="signupfield">
+							<%= f.password_field :password_confirmation, placeholder: "Confirm Password", class: 'form-control' %>
+						</p>
+					</div>
 					<button id="activate-step-2" class="btn btn-primary btn-lg" href="#step-2">Continue</button>
 				</div>
 			</div>
@@ -89,7 +86,7 @@
 					<center>
 					<h1 class="text-center">Picture</h1>
 					<%= f.file_field :image %> <br />
-					<%= f.submit %>
+					<%= f.submit "Create User", class: "btn btn-primary btn-lg" %>
 				</center>
 					<% end %>
 				</div>

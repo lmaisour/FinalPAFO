@@ -6,19 +6,25 @@ class SessionsController < ApplicationController
 
 	def create
 		u = User.where(email: params[:user][:email]).first
-		# First make sure we actually found a user
-		# Then, see if their password matches
+		# first make sure we actually find a user
+		# then see if user authenticates
 		if u && u.authenticate(params[:user][:password])
-		# Throw a cookie at the user that holds the logged in user ID	
+			# sets the cookie to the browser
 			session[:user_id] = u.id.to_s
-			redirect_to events_path
+			redirect_to root_path
+		elsif 
+			if u && u.authenticate(params[:user][:password][:is_admin])
+			session[:user_id] = u.id.to_s
+			redirect_to event_path
 		else
-			redirect_to new_session_path
+			redirect_to new_sessions_path
 		end
+	end
 	end
 
 	def destroy
+		# Kill our cookies!
 		reset_session
-		redirect_to users_path
+		redirect_to root_path
 	end
 end

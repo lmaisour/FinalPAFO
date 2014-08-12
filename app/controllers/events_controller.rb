@@ -43,6 +43,13 @@ class EventsController < ApplicationController
 		redirect_to events_path
 	end
 
+	def business
+	    parameters = { term: params[:term], limit: 16 }
+	    render json: Yelp.client.business('Los Angeles', parameters)
+  	end
+
+
+
 	private 
 
 	def check_admin

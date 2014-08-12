@@ -1,41 +1,46 @@
-<h1>EDIT A USER</h1>
+<div class="container" style="padding-top: 60px;">
 
-<center>
-	<div class="signupform">
-		<%= form_for @user do |f| %>
-		<% if @user.errors.any? %>
-		<div class="error messages">
-			<h2>Form is Invalid</h2>
-			<ul>
-				<% for message in @user.errors.full_messages %>
-				<li><%= message %></li>
-				<% end %>
-			</ul>
-		</div>
-		<% end %>
-		<p>
-			<%= f.label :first_name %><br />
-			<%= f.text_field :first_name %>
-		</p>
-		<p>
-			<%= f.label :last_name %><br />
-			<%= f.text_field :last_name %>
-		</p>
-		<p>
-			<%= f.label :email %><br />
-			<%= f.text_field :email %>
-		</p>
 
-		<%= form_for @user do |f| %> 
-			<%= f.file_field :image %> 
-			<%= f.submit "Upload" %> 
-			<% end %> 
-
-			Show <%= image_tag @user.image.url %>
-			<% end %>
-
-		
-	</div>
-	<%= link_to "back to the list of users!", users_path %>
-
-</center>
+  <h1 class="page-header">Edit Profile</h1>
+  <div class="row">
+  	<%= form_for @user, html: { class: 'form' } do |f| %>
+    <!-- left column -->
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="text-center">
+        <img src="http://lorempixel.com/200/200/people/9/" class="avatar img-circle img-thumbnail" alt="avatar">
+        <h6>Upload a different photo...</h6>
+        <%= f.file_field :image %> 
+		<%= f.submit "Upload" %> 
+      </div>
+    </div>
+    <!-- edit form column -->
+    <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
+    	
+      
+      <h3>Edit Your Info</h3>
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <%= f.label "First Name" %><br />
+		  <%= f.text_field :first_name, placeholder: "First Name", class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :last_name %><br />
+		  <%= f.text_field :last_name, placeholder: "Last Name", class: 'form-control' %>
+        </div>
+       
+        <div class="form-group">
+          <%= f.label :email %><br />
+		  <%= f.text_field :email, placeholder: "Email Address", class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label"></label>
+          <div class="col-md-8">
+            <%= f.submit "Save Changes", class: "btn btn-primary" %> 
+            <span></span>
+          </div>
+        </div>
+      </form>
+      <% end %>
+    </div>
+  </div>
+</div>

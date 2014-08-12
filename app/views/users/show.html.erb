@@ -7,7 +7,6 @@
 
 <span>
 
-<%= link_to "Delete this user!", :user, method: :delete, data: { confirm: "Are you sure you want to delete #{@user.first_name}?"} %>
+<%= render 'layouts/usercontrol' %>
 
-<%= link_to "Back to the list!", users_path %>
 </div>
