@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(params.require(:user).permit(:image, :first_name, :last_name, :password, :password_confirmation, :email, :mac, :pc, :iphone, :android, :democrat, :republican, :starWars, :starTrek, :coke, :pepsi, :teamJacob, :teamEdward, :harrypotter, :gameofthrones))
 		if @user.save 
-			redirect_to users_path
+			redirect_to events_path
 		else
 			render 'new'
 		end
