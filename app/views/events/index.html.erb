@@ -21,11 +21,14 @@
 							</div>
 
 						</div>
+
 						<div class="col-md-3 text-center">
-							<h2> <%= s.when %> <small> $<%= s.price %>.00 </small></h2>
+							<h2> <%= s.when %> <small> $<%= s.price %>.00 </small></h2>	
 							<button type="button" class="btn btn-default btn-lg btn-block"> More Info </button>
 							<button type="button" class="btn btn-warning btn-lg btn-block"> Join </button>
 						</div>
+						<%= link_to "More Info", event_path(s), class: "btn btn-default btn-md" %>
+						
 						<% end %>
 
 

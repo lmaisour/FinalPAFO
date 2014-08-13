@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.new(params.require(:user).permit(:image, :first_name, :last_name, :password, :password_confirmation, :email, :mac, :pc, :iphone, :android, :democrat, :republican, :starWars, :starTrek, :coke, :pepsi, :teamJacob, :teamEdward, :harrypotter, :gameofthrones))
+		@user = User.new(params.require(:user).permit(:is_admin, :image, :first_name, :last_name, :password, :password_confirmation, :email, :mac, :pc, :iphone, :android, :democrat, :republican, :starWars, :starTrek, :coke, :pepsi, :teamJacob, :teamEdward, :harrypotter, :gameofthrones))
 		if @user.save 
 			redirect_to events_path
 		else
@@ -43,4 +43,20 @@ class UsersController < ApplicationController
 		@user.destroy
 		redirect_to users_path
 	end
+
+	def event_ids
+		self.userinterest.map(&:event_id)
+	end
+	
+	def event_ids=(list)
+	end
+	
+	private 
+
+	def check_admin
+		unless current_user && current_user.is_admin
+			redirect_to events_path
+		end
+	end
+
 end

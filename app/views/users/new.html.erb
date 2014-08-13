@@ -51,15 +51,17 @@
 							<%= f.password_field :password_confirmation, placeholder: "Confirm Password", class: 'form-control' %>
 						</p>
 					</div>
-					<button id="activate-step-2" class="btn btn-primary btn-lg" href="#step-2">Continue</button>
+					<a id="activate-step-2" class="btn btn-primary btn-lg" href="#step-2">Continue</a>
 				</div>
 			</div>
 		</div>
-		<div class="row-setup-content" id="step-2">
+		<a class="row-setup-content" id="step-2">
 			<div class="col-xs-12">
 				<div class="col-md-12 well">
 					<h1 class="text-center"> Interests</h1>
 					<center>
+
+					@user.interests.build
 					Mac<%= f.check_box :mac %>OR
 					<%= f.check_box :pc %>PC<br />
 					iPhone<%= f.check_box :iphone %>OR
@@ -79,7 +81,7 @@
 				</center>
 				</div>
 			</div>
-		</div>
+		</a>
 		<div class="row-setup-content" id="step-3">
 			<div class="col-xs-12">
 				<div class="col-md-12 well">

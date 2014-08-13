@@ -13,12 +13,18 @@ class User
 
 	has_secure_password
 
+
+	has_many :events
+	has_many :interests
+
 	field :first_name, type: String
 	field :last_name, type: String
 	field :email, type: String
 	field :password_digest, type: String
 
 	field :is_admin, type: Mongoid::Boolean, default: false
+
+	# INTERESTS SHOULD BE IN INTEREST MODEL 
 
 	field :mac, type: Mongoid::Boolean
 	field :pc, type: Mongoid::Boolean
@@ -49,7 +55,4 @@ class User
 
 	field :frontend, type: Mongoid::Boolean
 	field :backend, type: Mongoid::Boolean
-
-	has_many :events
-	has_many :interests
 end
