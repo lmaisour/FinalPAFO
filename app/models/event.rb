@@ -14,7 +14,6 @@ class Event
 
   
   has_many :users
-  has_many :interests
 
   # accepts_nested_attributes_for :interests
   # accepts_nested_attributes_for :users
