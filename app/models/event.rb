@@ -16,8 +16,30 @@ class Event
   has_many :users
   has_many :interests
 
-  accepts_nested_attributes_for :interests
-  accepts_nested_attributes_for :users
+  # accepts_nested_attributes_for :interests
+  # accepts_nested_attributes_for :users
+
+  #has_many :users, through: :interests
+  def users
+    User.find(self.userinterests.map(&:shoe_id))
+  end
+
+  def user_ids
+    ret = []
+    self.interests.each do |r|
+      ret << r.user_id if r.user_id
+    end
+    ret
+  end
+
+  def user_ids=(list)
+    self.interests.destroy
+    list.each do |user_id|
+      self.interests.create(user_id: user_id)if user_id
+    end
+  end
+
+  #has_many :interests, through: :users ?????
 
   
 end

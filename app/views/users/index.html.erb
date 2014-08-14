@@ -5,7 +5,7 @@
     		<ul class="thumbnails">
     			<% @users.each do |s| %>
                   <div class="thumbnail clearfix">
-                    <img src="http://placehold.it/320x200" alt="ALT NAME" class="pull-left span2 clearfix" style='margin-right:10px'>
+                    <%= image_tag s.image, size:"150x150", class: "pull-left span2 clearfix" %>
                      <!-- <%= image_tag(s.image.url) %> -->
                     <div class="caption" class="pull-left">
                       

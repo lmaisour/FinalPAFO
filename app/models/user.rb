@@ -55,4 +55,7 @@ class User
 
 	field :frontend, type: Mongoid::Boolean
 	field :backend, type: Mongoid::Boolean
+
+	validates_presence_of :first_name
+	validates_uniqueness_of :email
 end

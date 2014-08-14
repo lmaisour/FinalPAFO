@@ -1,0 +1,7 @@
+Here are the current user interests
+
+<br />
+
+<% @user_interests.each do |p| %>
+
+	<%= p.user.first_name %> is interested in being a <%= p.interest.name %>

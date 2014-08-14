@@ -4,8 +4,10 @@ class Interest
 	has_many :users
 	has_many :events
 
-	accepts_nested_attributes_for :events
-	accepts_nested_attributes_for :users
+	# belongs_to :events
+
+	# accepts_nested_attributes_for :events
+	# accepts_nested_attributes_for :users
 
 	field :mac, type: Mongoid::Boolean
 	field :pc, type: Mongoid::Boolean

@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   post 'users' => 'users#create'
 
-  get 'users/:id/edit' => 'users#edit'
+  get 'users/:id/edit' => 'users#edit', as: :edit_user
   patch 'users/:id/' => 'users#update'
 
   delete 'users/:id' => 'users#destroy'
@@ -38,7 +38,8 @@ Rails.application.routes.draw do
 
 # -----------------------------------------------------------------------#
   
-
+  get 'user_interests' => 'user_interests#index', as: :user_interests
+  
 
 
   # The priority is based upon order of creation: first created -> highest priority.
