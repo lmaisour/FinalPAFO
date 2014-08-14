@@ -47,6 +47,26 @@ class EventsController < ApplicationController
 	    render json: Yelp.client.business('Los Angeles', parameters)
   	end
 
+  	def attend
+	    @event = Event.find(params[:id])
+	    current_user.events << @event
+	    redirect_to @event, notice: 'You have promised to attend this event.'
+  	end
+
+  	def withdraw
+	  event    = Event.find(params[:id])
+	  attendee = Attendee.find_by_user_id_and_event_id(current_user.id, event.id)
+
+	  if attendee.blank?
+	   
+  	end
+
+  	attendee.delete
+
+  	redirect_to event, notice: 'You are no longer attending this event.'
+
+	end
+
 
 
 	private 
