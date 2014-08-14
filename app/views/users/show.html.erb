@@ -5,6 +5,14 @@
 <div class="signupform">
 <p>This user's name is <%= @user.first_name %> <%= @user.last_name %>, and his/her email is <%= @user.email %> </p>
 
+
+<h1><%= @user.first_name %></h1>
+
+<p>Here is data from the master record <b>
+<%= @user.last_name%></b> </p>
+<p>Here is data from all the detail records that match: <%=@user_detail_list%></p>
+
+
 <span>
 
 <%= render 'layouts/usercontrol' %>

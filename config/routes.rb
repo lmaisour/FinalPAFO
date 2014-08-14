@@ -25,6 +25,7 @@ Rails.application.routes.draw do
 
 # ----------------------- EVENTS RESTFUL ROUTES -------------------------#
 
+
   get 'events/' => 'events#index'
   get 'events/new' => 'events#new'
   get 'events/:id' => 'events#show', as: :event
@@ -40,8 +41,6 @@ Rails.application.routes.draw do
   
   get 'user_interests' => 'user_interests#index', as: :user_interests
   
-
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

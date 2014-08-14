@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.new(params.require(:user).permit(:is_admin, :image, :first_name, :last_name, :password, :password_confirmation, :email, :mac, :pc, :iphone, :android, :democrat, :republican, :starWars, :starTrek, :coke, :pepsi, :teamJacob, :teamEdward, :harrypotter, :gameofthrones))
+		@user = User.new(user_params)
 		if @user.save 
 			redirect_to events_path
 		else
@@ -58,5 +58,12 @@ class UsersController < ApplicationController
 			redirect_to events_path
 		end
 	end
+
+	private
+
+	def user_params
+	    params.require(:user).permit(:is_admin, :image, :first_name, :last_name, :password, :password_confirmation, :email, event_ids: [])
+	end
+
 
 end

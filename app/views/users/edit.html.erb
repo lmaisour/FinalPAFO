@@ -40,7 +40,12 @@
           </div>
         </div>
       </form>
+      <%= form_for @user do |f| %>
+     <br /><br /> Is interested on the topic of <br /> <br />
+    <%= f.collection_check_boxes :event_ids, Event.all, :id, :name %>
+  <br><br>
       <% end %>
     </div>
   </div>
 </div>
+<% end %>

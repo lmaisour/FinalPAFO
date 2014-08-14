@@ -23,7 +23,7 @@ class SessionsController < ApplicationController
 	end
 
 
-def destroy
+	def destroy
 		# Kill our cookies!
 		reset_session
 		redirect_to root_path
