@@ -19,7 +19,7 @@
 						<div class="participants">
 							<p class="list-group-item-text">
 								<h3>Check Out Who's Going</h3>
-								<% @attendees.each do |e| %>
+								<% @events.attendees.each do |e| %>
 								<%= e.user_id %>
 								<% end %>
 							</div>

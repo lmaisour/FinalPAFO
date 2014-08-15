@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 
 	def index
 		@events = Event.all
-		@attendees = Event.attendees 
+		# @attendees = Event.attendees 
 	end
 
 
