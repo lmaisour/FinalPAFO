@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
 			# sets the cookie to the browser
 			session[:user_id] = u.id.to_s
 			if u.is_admin == true
-				redirect_to events_path
+				redirect_to admin_path
 			else
 				redirect_to users_path
 			end

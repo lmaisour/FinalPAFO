@@ -1,0 +1,25 @@
+<h1><center>Hello, Admin! What Would You Like To Do Today?</center></h2>
+	<div class="admincontainer">
+		<div class="jumbotrons">
+			<div class="jumbotron">
+
+				<p>Create A New User</p>
+
+				<%= link_to "Add A New User", new_user_path, class: "btn btn-primary btn-lg" %>
+				<br/><br/>
+				<%= link_to "View/Edit All Users", users_path, class: "btn btn-primary btn-lg" %>
+
+			</div>
+
+
+			<div class="jumbotron">
+
+				<p>Create A New Event</p>
+
+				<%= link_to "Add A New Event", new_event_path, class: "btn btn-warning btn-lg" %>
+				<br/><br/>
+				<%= link_to "View/Edit All Events", events_path, class: "btn btn-warning btn-lg" %>
+			</div>
+
+		</div>
+	</div>

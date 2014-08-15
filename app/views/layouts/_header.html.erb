@@ -13,7 +13,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
+        <div class="rightsidenav">
         <% if current_user %>
+         <div class="logbutton">
+          <%= link_to 'EVENTS', events_path  %>   
+        </div>
           <div class="logbutton">
               <%= link_to 'LOG OUT', session_path, method: :delete %>
           </div>
@@ -21,6 +25,7 @@
             <div class="logbutton">
               <%= link_to 'LOG IN', new_session_path  %>   
             </div>
+          </div>
         <% end %>
 
 

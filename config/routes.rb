@@ -14,12 +14,15 @@ Rails.application.routes.draw do
   get 'users/:id' => 'users#show', as: :user
   post 'events/attend/:id' => 'events#attend', as: :events_attend
 
+
   post 'users' => 'users#create'
 
   get 'users/:id/edit' => 'users#edit', as: :edit_user
   patch 'users/:id/' => 'users#update'
 
   delete 'users/:id' => 'users#destroy'
+
+  get "/admin", to: "pages#admin"
 
   
   resources :users
