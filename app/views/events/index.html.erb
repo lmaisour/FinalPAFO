@@ -19,9 +19,17 @@
 						<div class="participants">
 							<p class="list-group-item-text">
 								<h3>Check Out Who's Going</h3>
-								<% @events.attendees.each do |e| %>
-								<%= e.user_id %>
+
+								<% s.attendees.each do |k| %>
+								
+								<%= User.find(k.user_id).image %>
+								<ul>
+								<%= image_tag (User.find(k.user_id).image) %>
+							</ul>
+						
 								<% end %>
+
+								
 							</div>
 
 						</div>
@@ -34,8 +42,10 @@
 						</div>
 						<%= link_to "Attend", events_attend_path(s.id), method: :post, class: "btn btn-primary btn-lg"  %>
 						<%= link_to "More Info", event_path(s), class: "btn btn-default btn-lg" %>
+						<% if current_user.is_admin %>
 						<%= link_to "Edit", edit_event_path(s), class: "btn btn-warning btn-lg"  %>
 							<% end %>				
+							<% end %>
 					</a>
 					
 				</div>
