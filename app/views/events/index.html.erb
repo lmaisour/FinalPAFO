@@ -7,7 +7,8 @@
 				<a class="list-group-item ">
 					<div class="media col-md-3">
 						<figure class="pull-left">
-							<img class="media-object img-rounded img-responsive"  src="http://placehold.it/350x250" alt="placehold.it/350x250" >
+							<img class="media-object img-rounded img-responsive"  src="http://placehold.it/500x450" alt="placehold.it/450x250" >
+
 						</figure>
 					</div>
 					<div class="col-md-6">
@@ -18,6 +19,7 @@
 						<div class="participants">
 							<p class="list-group-item-text">
 								<h3>Check Out Who's Going</h3>
+								<%= s.attendees %>
 							</div>
 
 						</div>
@@ -25,10 +27,11 @@
 						<div class="col-md-3 text-center">
 							<h2> <%= s.when %> <small> $<%= s.price %>.00 </small></h2>	
 							<button type="button" class="btn btn-default btn-lg btn-block"> More Info </button>
-							<%= link_to "Attend", events_attend_path(s.id), method: :post %>
+							
 							<button type="button" class="btn btn-warning btn-lg btn-block"> Join </button>
 						</div>
-						<%= link_to "More Info", event_path(s), class: "btn btn-default btn-md" %>
+						<%= link_to "Attend", events_attend_path(s.id), method: :post, class: "btn btn-primary btn-lg" %>
+						<%= link_to "More Info", event_path(s), class: "btn btn-default btn-lg" %>
 						
 						<% end %>
 
@@ -39,4 +42,7 @@
 		</div>
 	</div>
 </div>	
+
+
+
 

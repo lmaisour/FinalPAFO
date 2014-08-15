@@ -42,34 +42,18 @@ class EventsController < ApplicationController
 		redirect_to events_path
 	end
 
-	# def business
-	#     parameters = { term: params[:term], limit: 16 }
-	#     render json: Yelp.client.business('Los Angeles', parameters)
- #  	end
-
+	def business
+	    parameters = { term: params[:term], limit: 16 }
+	    render json: Yelp.client.business('Los Angeles', parameters)
+  	end
 
   	def attend
-  		puts "--ATTEND--"
 	    @event = Event.find(params[:id].to_s)
 	    puts @event.name
 	    Attendee.create(user_id: current_user.id, event_id: @event.id)
-	    redirect_to @event, notice: 'You have promised to attend this event.'
+	    flash[:notice] = "You Have Joined This Dinner"
+	    redirect_to @event
   	end
-
-  	# def withdraw
-	  # event    = Event.find(params[:id])
-	  # attendee = Attendee.find_by_user_id_and_event_id(current_user.id, event.id)
-
-	  # if attendee.blank?
-	   
-  	# end
-
- #  	attendee.delete
-
- #  	redirect_to event, notice: 'You are no longer attending this event.'
-
-	# end
-
 
 
 	private 
