@@ -38,7 +38,19 @@ class UsersController < ApplicationController
 		end
 	end
 
+	def destroy
+		@user = User.find(params[:id])
+		@user.destroy
+		redirect_to users_path
+	end
 
+	private 
+
+	def check_admin
+		unless current_user && current_user.is_admin
+			redirect_to events_path
+		end
+	end
 
 	private
 

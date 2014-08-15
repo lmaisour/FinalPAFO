@@ -13,7 +13,7 @@ class Event
   field :description, type: String
 
   
-  has_many :users
+  has_many :attendees
 
   # accepts_nested_attributes_for :interests
   # accepts_nested_attributes_for :users

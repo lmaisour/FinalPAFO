@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'users/' => 'users#index'
   get 'users/new' => 'users#new' 
   get 'users/:id' => 'users#show', as: :user
+  post 'events/attend/:id' => 'events#attend', as: :events_attend
 
   post 'users' => 'users#create'
 

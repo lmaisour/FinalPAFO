@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 #to use Yelp API
 gem 'yelp'
 
+#time to party
+gem 'httparty'
+
 #get bcrypt for password storing
 gem 'bcrypt-ruby', '~> 3.1.5', require: "bcrypt"
 
