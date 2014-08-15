@@ -3,6 +3,7 @@ class EventsController < ApplicationController
 
 	def index
 		@events = Event.all
+		@attendees = Event.attendees 
 	end
 
 
@@ -15,7 +16,7 @@ class EventsController < ApplicationController
 	end
 
 	def create
-		@event = Event.new(params.require(:event).permit(:image, :name, :place, :when, :price, :participants))
+		@event = Event.new(params.require(:event).permit(:image, :name, :place, :when, :price, :participants, :short_description, :description))
 		if @event.save 
 			redirect_to events_path
 		else
@@ -30,7 +31,6 @@ class EventsController < ApplicationController
 	def update
 		@event = Event.find(params[:id])
 		if @event.update_attributes(params[:product])
-			flash[:notice] = "Event has been edited"
 			redirect_to event_path(@event)
 		else
 		end
@@ -42,17 +42,15 @@ class EventsController < ApplicationController
 		redirect_to events_path
 	end
 
-	def business
-	    parameters = { term: params[:term], limit: 16 }
-	    render json: Yelp.client.business('Los Angeles', parameters)
-  	end
-
   	def attend
 	    @event = Event.find(params[:id].to_s)
-	    puts @event.name
 	    Attendee.create(user_id: current_user.id, event_id: @event.id)
-	    flash[:notice] = "You Have Joined This Dinner"
 	    redirect_to @event
+  	end
+
+  	def business
+	    parameters = { term: params[:term], limit: 16 }
+	    render json: Yelp.client.business('Los Angeles', parameters)
   	end
 
 

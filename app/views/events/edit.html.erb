@@ -1,4 +1,4 @@
-<h1>EDIT A event</h1>
+<h1>EDIT AN EVENT</h1>
 
 <center>
 	<div class="signupform">
@@ -33,9 +33,18 @@
 			<%= f.label :participants %><br />
 			<%= f.text_field :participants %>
 		</p>
+			<%= f.label :short_description %><br />
+			<%= f.text_field :short_description %>
+		</p>
+			<%= f.label :description %><br />
+			<%= f.text_field :description %>
+		</p>
 		<p class="button"><%= f.submit %></p>
 		<% end %>
 	</div>
+	<%= link_to "Delete This Event", :event, method: :delete %>
+
+	<br>
 	<%= link_to "back to the list of events!", events_path %>
 
 </center>

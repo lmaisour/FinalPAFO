@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
 			if u.is_admin == true
 				redirect_to admin_path
 			else
-				redirect_to users_path
+				redirect_to events_path
 			end
 
 		else

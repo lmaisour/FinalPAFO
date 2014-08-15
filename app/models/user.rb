@@ -29,7 +29,8 @@ class User
 	validates_uniqueness_of :email
 
 	# TO CREATE DATABASE RELATIONSHIP
-	has_many :attendees
+	# has_many :attendees
+    has_many :events
 
 
   def events

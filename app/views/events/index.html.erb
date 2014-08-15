@@ -19,8 +19,8 @@
 						<div class="participants">
 							<p class="list-group-item-text">
 								<h3>Check Out Who's Going</h3>
-								<% @events.each do |e| %>
-								<%= e.name %>
+								<% @attendees.each do |e| %>
+								<%= e.user_id %>
 								<% end %>
 							</div>
 
@@ -34,11 +34,10 @@
 						</div>
 						<%= link_to "Attend", events_attend_path(s.id), method: :post, class: "btn btn-primary btn-lg"  %>
 						<%= link_to "More Info", event_path(s), class: "btn btn-default btn-lg" %>
-						
-						<% end %>
-
-
+						<%= link_to "Edit", edit_event_path(s), class: "btn btn-warning btn-lg"  %>
+							<% end %>				
 					</a>
+					
 				</div>
 			</div>
 		</div>
