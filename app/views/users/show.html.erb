@@ -1,22 +1,27 @@
-<h1><%= @user.first_name %></h1>
+<div class="container">
+	<div class="well">
+		<div class="row">
+			<h1>Some More Info About <%= @user.first_name %></h1>
 
-<%= image_tag @user.image, size:"150x150" %>
+			<%= image_tag @user.image, size:"150x150" %>
 
-<div class="signupform">
-<p>This user's name is <%= @user.first_name %> <%= @user.last_name %>, and his/her email is <%= @user.email %> </p>
+			<div class="signupform">
+				<p>This user's name is <%= @user.first_name %> <%= @user.last_name %>, and his/her email is <%= @user.email %> </p>
 
-
-<h1><%= @user.first_name %></h1>
-
-<p>Here is data from the user record <b>
-<%= @user.email%></b> </p>
-<p>Here is data from all the event records that match: <%=@attendee_list%></p>
+				<%= @user.first_name %> is attending these events: <%= @events %><br />
 
 
+			<!-- 	<h1>Some More Info About <%= @user.first_name %></h1>
 
-<span>
+				<p>Here is data from the user record <b>
+					<%= @user.email%></b> </p>
+					<p>Here is data from all the event records that match: <%=@attendee_list%></p>
 
-<%= render 'layouts/usercontrol' %>
+				-->
+				<%= render 'layouts/usercontrol' %>
 
 
+			</div>
+		</div>
+	</div>
 </div>

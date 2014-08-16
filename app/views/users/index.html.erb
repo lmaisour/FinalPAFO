@@ -8,14 +8,16 @@
                     <%= image_tag s.image, size:"150x150", class: "pull-left span2 clearfix" %>
                      <!-- <%= image_tag(s.image.url) %> -->
                     <div class="caption" class="pull-left">
-                      
+                      <center>
                     	<h3><%= s.first_name %> <%= s.last_name %></h3>
-
-                      <button><%= link_to "Show more details!", user_path(s) %></button>
+                     <%= link_to "Show more details!", user_path(s), class: "btn btn-default btn-lg" %>
+                   </center>
                     </div>
                   </div> 
+
                   <% end %>              
             </ul>
         </div>
 	</div>
 </div>
+

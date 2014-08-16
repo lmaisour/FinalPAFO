@@ -1,8 +1,8 @@
-<%= link_to "Delete This User", :user, method: :delete, data: { confirm: "Are you sure you want to delete #{@user.first_name}?"} %>
-<br />
+<% if current_user.is_admin %>
+<%= link_to "Delete This User", :user, method: :delete, data: { confirm: "Are you sure you want to delete #{@user.first_name}?"}, class: "btn btn-default btn-lg" %>
 
-<%= link_to "Edit this user!", edit_user_path %>
+<%= link_to "Edit this user!", edit_user_path, class: "btn btn-default btn-lg" %>
+<% end %>
 
-<br />
 
-<%= link_to "Back to the list!", users_path %>
+<%= link_to "Back to the list!", users_path, class: "btn btn-default btn-lg" %>

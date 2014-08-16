@@ -11,6 +11,17 @@ class Event
   field :participants, type: Integer
   field :short_description, type: String
   field :description, type: String
+  field :starter1, type: String
+  field :starter2, type: String
+  field :starter3, type: String
+  field :entree1, type: String
+  field :entree2, type: String
+  field :entree3, type: String
+  field :dessert1, type: String
+  field :dessert1, type: String
+  field :dessert1, type: String
+  field :drink, type: String
+
 
   
   has_many :attendees
