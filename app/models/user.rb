@@ -33,36 +33,36 @@ class User
     has_many :events
 
 
-  def events
-    Event.find event_ids
-  end
-    #accepts_nested_attributes_for :pastries
+  # def events
+  #   Event.find event_ids
+  # end
+  #   #accepts_nested_attributes_for :pastries
 
-  def event_ids
-      event_ids_array = []
-      self.attendees.each do |one_attendee|
-        if one_attendee.event_id
-          event_ids_array.push one_attendee.event_id
-      end 
-    end
-      event_ids_array 
-  end
+  # # def event_ids
+  # #     event_ids_array = []
+  # #     self.attendees.each do |one_attendee|
+  # #       if one_attendee.event_id
+  # #         event_ids_array.push one_attendee.event_id
+  # #     end 
+  # #   end
+  # #     event_ids_array 
+  # # end
 
-    def event_ids=(list)
-      self.attendees.destroy
-      list.each do |event_id|
-        self.attendees.create(event_id: event_id)
-      end
-    end
+  #   def event_ids=(list)
+  #     self.attendees.destroy
+  #     list.each do |event_id|
+  #       self.attendees.create(event_id: event_id)
+  #     end
+  #   end
 
-    # some way of showing a list
-    def event_list
-      events_string = ""
-      events.each do |one_event|
-        events_string += ", " + one_event.name
-      end
-      events_string.slice(2,events_string.length - 1)
-      events_string
-    end
+  #   # some way of showing a list
+  #   def event_list
+  #     events_string = ""
+  #     events.each do |one_event|
+  #       events_string += ", " + one_event.name
+  #     end
+  #     events_string.slice(2,events_string.length - 1)
+  #     events_string
+  #   end
 
   end

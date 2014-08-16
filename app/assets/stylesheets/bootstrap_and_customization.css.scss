@@ -14,7 +14,9 @@ text-align:center;
 color:#fff;
 }
 .video-section h1{
-font-size:80px;
+
+/* props to alexis for letting me know of VW */
+font-size:6vw;
 font-family: 'Lato', sans-serif;
 font-weight:bold;
 text-transform: uppercase;
@@ -99,4 +101,7 @@ a.list-group-item.active small {
 	margin-left: 2%;
 
 	width: 400px
+}
+.participantimages {
+	display: inline-flex;
 }
