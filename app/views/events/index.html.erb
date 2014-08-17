@@ -7,7 +7,7 @@
 				<a class="list-group-item ">
 					<div class="media col-md-3">
 						<figure class="pull-left">
-							<img class="media-object img-rounded img-responsive"  src="http://placehold.it/500x450" alt="placehold.it/450x250" >
+							<img class="media-object img-rounded img-responsive"  src="http://placehold.it/300x240" alt="placehold.it/450x250" >
 
 						</figure>
 					</div>
@@ -16,34 +16,32 @@
 						<p class="list-group-item-text"> 
 							<%= s.short_description %>
 						</p>
-						<div class="participants">
-							<p class="list-group-item-text">
+						<div class="col-md-3 text-center">
+							
+							
+						</div>
 
+						<!-- <div class="participants"> 
+							 <p class="list-group-item-text"> --> 
 								<h3>Check Out Who's Going</h3>
-
 								<div class="participantimages">
 								<% s.attendees.each do |k| %>
 
-								<%= image_tag (User.find(k.user_id).image), size:"80x80" %>
-								
+								<%= image_tag(User.find(k.user_id).image, size:"80x80" ) %>
+
 								<% end %>
-							</div>
-
 								
 							</div>
 
 						</div>
-
-						<div class="col-md-3 text-center">
-							<h2> <%= s.when %> <small> $<%= s.price %>.00 </small></h2>	
-							<button type="button" class="btn btn-default btn-lg btn-block"> More Info </button>
-<button type="button" class="btn btn-warning btn-lg btn-block"> Join </button>
-						</div>
-						<%= link_to "Attend", events_attend_path(s.id), method: :post, class: "btn btn-primary btn-lg"  %>
-						<%= link_to "More Info", event_path(s), class: "btn btn-default btn-lg" %>
+						<h2><%= s.when %></h2>
+						<h3>$<%= s.price %>.00</h3>
+						
+						<%= button_to "Attend", events_attend_path(s.id), method: :post, class: "btn btn-primary btn-lg"  %>
+						<%= button_to "More Info", event_path(s), class: "btn btn-default btn-lg", :method => :get %>
 						<% if current_user.is_admin %>
-						<%= link_to "Edit", edit_event_path(s), class: "btn btn-warning btn-lg"  %>
-						<% end %>				
+						<%= button_to "Edit", edit_event_path(s), class: "btn btn-warning btn-lg", :method => :get  %>				
+						<% end %>
 						<% end %>
 					</a>
 					

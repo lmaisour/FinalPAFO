@@ -3,14 +3,35 @@
 
 		<h1 class="text-center">About The <%= @event.name %> Meetup...</h1>
 		<div class="list-group">
-			<a class="list-group-item ">
-				<div class="media col-sm-3">
+				<div class="media col-md-12">
+					<h2 class="list-group-item-heading"><center>Event Description</center> </h2>
+					<p class="list-group-item-text"> 
+						<%= @event.description %>
+					</p>
 					<ul>
 						<li>What</li>It is a meet up regarding <%= @event.name %>
 						<li>Where</li>It is
 						<li>When</li>
 						<li>Who</li>
 					</ul>
+				</div>
+				<div class="col-md-12">
+					
+					<div class="participants">
+						<p class="list-group-item-text">
+							<h3>Check Out Who's Going</h3>
+
+						</div>
+					</div>
+					<div class="col-md-12 text-center">
+						<h2> <%= @event.when %> <small> $<%= @event.price %>.00 </small></h2>
+					</div>
+				<h1 class="text-center">About <%= @event.place %> Restaurant </h1>
+
+				<div class="media col-md-12">
+					<figure class="pull-left">
+						<img class="media-object img-rounded img-responsive"  src="http://placehold.it/350x250" alt="placehold.it/350x250" >
+					</figure>
 				</div>
 				<div class="col-md-6">
 					<h2 class="list-group-item-heading"> </h2>
@@ -23,35 +44,9 @@
 
 						</div>
 					</div>
-					<div class="col-md-3 text-center">
-						<h2> <%= @event.when %> <small> $<%= @event.price %>.00 </small></h2>
-					</div>
-
-				</a>
-
-				<h1 class="text-center">About <%= @event.place %> Restaurant </h1>
-				<div class="list-group">
-					<a class="list-group-item ">
-						<div class="media col-sm-3">
-							<figure class="pull-left">
-								<img class="media-object img-rounded img-responsive"  src="http://placehold.it/350x250" alt="placehold.it/350x250" >
-							</figure>
-						</div>
-						<div class="col-md-6">
-							<h2 class="list-group-item-heading"> </h2>
-							<p class="list-group-item-text"> 
-								<%= @event.description %>
-							</p>
-							<div class="participants">
-								<p class="list-group-item-text">
-									<h3>Check Out Who's Going</h3>
-
-								</div>
-							</div>
-							<%= link_to "Attend", events_attend_path, method: :post, class: "btn btn-primary btn-lg" %>
-							<%= link_to "Back To Events", events_path, class: "btn btn-default btn-lg" %>
-						</a>
-					</div>
+					<%= link_to "Attend", events_attend_path, method: :post, class: "btn btn-primary btn-lg" %>
+					<%= link_to "Back To Events", events_path, class: "btn btn-default btn-lg" %>
+					
 				</div>
 			</div>
 		</div>	

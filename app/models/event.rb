@@ -8,7 +8,6 @@ class Event
   field :place, type: String
   field :when, type: String
   field :price, type: Integer
-  field :participants, type: Integer
   field :short_description, type: String
   field :description, type: String
   field :starter1, type: String
@@ -18,8 +17,8 @@ class Event
   field :entree2, type: String
   field :entree3, type: String
   field :dessert1, type: String
-  field :dessert1, type: String
-  field :dessert1, type: String
+  field :dessert2, type: String
+  field :dessert3, type: String
   field :drink, type: String
 
 

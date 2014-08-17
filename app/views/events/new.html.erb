@@ -21,10 +21,6 @@
 		<%= f.text_field :price %>
 	</p>
 	<p class="signupfield">
-		<%= f.label :participants %><br />
-		<%= f.text_field :participants %>
-	</p>
-	<p class="signupfield">
 		<%= f.label :short_description %><br />
 		<%= f.text_field :short_description %>
 	</p>
@@ -32,5 +28,51 @@
 		<%= f.label :description %><br />
 		<%= f.text_field :description %>
 	</p>
-	<p class="button"><%= f.submit %></p>
+	<p class="signupfield">
+		<%= f.label :starter1 %><br />
+		<%= f.text_field :starter1 %>
+	</p>
+	<p class="signupfield">
+		<%= f.label :starter2 %><br />
+		<%= f.text_field :starter2 %>
+	</p>
+	<p class="signupfield">
+		<%= f.label :starter3 %><br />
+		<%= f.text_field :starter3 %>
+	</p>
+	<p class="signupfield">
+		<%= f.label :entree1 %><br />
+		<%= f.text_field :entree1 %>
+	</p>
+	<p class="signupfield">
+		<%= f.label :entree2 %><br />
+		<%= f.text_field :entree2 %>
+	</p>
+	<p class="signupfield">
+		<%= f.label :entree3 %><br />
+		<%= f.text_field :entree3 %>
+	</p>
+	<p class="signupfield">
+		<%= f.label :dessert1 %><br />
+		<%= f.text_field :dessert1 %>
+	</p>
+	<p class="signupfield">
+		<%= f.label :dessert1 %><br />
+		<%= f.text_field :dessert1 %>
+	</p>
+	<p class="signupfield">
+		<%= f.label :dessert2 %><br />
+		<%= f.text_field :dessert2 %>
+	</p>
+	<p class="signupfield">
+		<%= f.label :dessert3 %><br />
+		<%= f.text_field :dessert3 %>
+	</p>
+	<p class="signupfield">
+		<%= f.label :drink %><br />
+		<%= f.text_field :drink %>
+	</p>
+	<%= f.file_field :image %> <br />
+
+	<%= f.submit %></p>
 <% end %>

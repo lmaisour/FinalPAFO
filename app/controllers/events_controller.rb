@@ -16,7 +16,7 @@ class EventsController < ApplicationController
 	end
 
 	def create
-		@event = Event.new(params.require(:event).permit(:image, :name, :place, :when, :price, :participants, :short_description, :description))
+		@event = Event.new(params.require(:event).permit(:image, :name, :place, :when, :price, :short_description, :description, :starter1, :starter2, :starter3, :entree1, :entree2, :entree3, :dessert1, :dessert2, :dessert3, :drink, :eventimage ))
 		if @event.save 
 			redirect_to events_path
 		else
@@ -45,7 +45,13 @@ class EventsController < ApplicationController
   	def attend
 	    @event = Event.find(params[:id].to_s)
 	    Attendee.create(user_id: current_user.id, event_id: @event.id)
-	    redirect_to @event
+	    redirect_to events_path
+  	end
+
+  	def withdraw
+	    @event = Event.find(params[:id].to_s)
+	    Attendee.destroy(user_id: current_user.id, event_id: @event.id)
+	    redirect_to events_path
   	end
 
   	def business

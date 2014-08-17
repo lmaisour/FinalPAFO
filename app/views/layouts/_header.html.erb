@@ -18,6 +18,12 @@
          <div class="logbutton">
           <%= link_to 'EVENTS', events_path  %>   
         </div>
+         
+          <% if current_user.is_admin %>
+         <div class="logbutton">
+          <%= link_to 'ADMIN PANEL', admin_path  %>   
+        </div>
+        <% end %>
           <div class="logbutton">
               <%= link_to 'LOG OUT', session_path, method: :delete %>
           </div>
@@ -26,8 +32,9 @@
               <%= link_to 'LOG IN', new_session_path  %>   
             </div>
           </div>
-        <% end %>
-
+       
+        
+<% end %>
 
           </ul>
         </li>
