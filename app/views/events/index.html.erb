@@ -37,7 +37,9 @@
 						<h2><%= s.when %></h2>
 						<h3>$<%= s.price %>.00</h3>
 						
-						<%= button_to "Attend", events_attend_path(s.id), method: :post, class: "btn btn-primary btn-lg"  %>
+						<%= button_to "Attend", events_attend_path(s.id), method: :post, class: "btn btn-warning btn-lg"  %>
+					
+
 						<%= button_to "More Info", event_path(s), class: "btn btn-default btn-lg", :method => :get %>
 						<% if current_user.is_admin %>
 						<%= button_to "Edit", edit_event_path(s), class: "btn btn-warning btn-lg", :method => :get  %>				

@@ -8,16 +8,6 @@
 			<div class="signupform">
 				<p>This user's name is <%= @user.first_name %> <%= @user.last_name %>, and his/her email is <%= @user.email %> </p>
 
-				<%= @user.first_name %> is attending these events: <%= @events %><br />
-
-
-			<!-- 	<h1>Some More Info About <%= @user.first_name %></h1>
-
-				<p>Here is data from the user record <b>
-					<%= @user.email%></b> </p>
-					<p>Here is data from all the event records that match: <%=@attendee_list%></p>
-
-				-->
 				<%= render 'layouts/usercontrol' %>
 
 
