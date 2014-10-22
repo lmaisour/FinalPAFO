@@ -1,16 +1,10 @@
-users = User.create([{
-
+User.create(
 	first_name: "Levani",
 	last_name: "Maisouradze",
-	email: "lmaisour@gmail.com"
-
-},
-{
-	first_name: "Test",
-	last_name: "Dummy",
-	email: "testing@gmail.com"
-
-	}])
+	email: "lmaisour1@gmail.com",
+	password: "doberman",
+	is_admin: true
+)
 
 
 
